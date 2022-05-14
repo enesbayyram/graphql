@@ -1,0 +1,23 @@
+type Query{
+	getStudents:[Student]
+	getStudentById(id:Int):Student
+}
+
+type Mutation{
+	create(studentDto:StudentDto):Student
+}
+
+
+type Student{
+	id:ID,
+	firstName:String!,
+	lastName:String!,
+	gender:String!
+}
+
+input StudentDto{
+	firstName:String!,
+	lastName:String!,
+	gender:String!
+
+}
